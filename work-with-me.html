@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work With Me | Kolbrún Davis</title>
+
+  <meta
+    name="description"
+    content="Start a website project with Kolbrún Davis. Submit your project inquiry and receive a reply with next steps."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="cursor-light"></div>
+
+  <div class="page-shell single-page-shell">
+    <main class="content single-page-content">
+      <section class="hero-card inquiry-hero">
+        <p class="eyebrow">Work With Me</p>
+        <h1 class="inquiry-title">Start your website project</h1>
+
+        <p class="hero-text">
+          Tell me about your business, your goals, and the kind of website
+          you’re looking for. I’ll review your inquiry and get back to you
+          as soon as possible.
+        </p>
+
+        <div class="hero-actions">
+          <a href="index.html" class="btn btn-secondary">Back to Portfolio</a>
+        </div>
+      </section>
+
+      <section class="content-section work-with-me-page">
+        <div class="work-grid">
+          <div class="work-copy">
+            <div class="work-card">
+              <h3>What I can help with</h3>
+              <ul>
+                <li>Custom business websites</li>
+                <li>Landing pages</li>
+                <li>Portfolio websites</li>
+                <li>Website redesigns</li>
+                <li>Clean, modern frontend layouts</li>
+              </ul>
+            </div>
+
+            <div class="work-card">
+              <h3>What happens next</h3>
+              <ol>
+                <li>You submit your project details</li>
+                <li>I review everything carefully</li>
+                <li>I contact you with next steps</li>
+              </ol>
+            </div>
+          </div>
+
+          <form
+            class="project-form"
+            action="https://formspree.io/f/xwvrdkyl"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="New Portfolio Inquiry" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://kolla95.github.io/Portfolio/thank-you.html"
+            />
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required />
+              </div>
+
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="business-name">Business / Project Name</label>
+                <input type="text" id="business-name" name="business-name" />
+              </div>
+
+              <div class="form-field">
+                <label for="project-type">Project Type</label>
+                <select id="project-type" name="project-type" required>
+                  <option value="">Select one</option>
+                  <option value="new-website">New Website</option>
+                  <option value="redesign">Website Redesign</option>
+                  <option value="landing-page">Landing Page</option>
+                  <option value="portfolio">Portfolio Website</option>
+                  <option value="small-updates">Small Fixes / Updates</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="existing-website">Do you already have a website?</label>
+                <select id="existing-website" name="existing-website">
+                  <option value="">Select one</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                  <option value="not-sure">Not sure</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="domain">Do you already have a domain?</label>
+                <select id="domain" name="domain">
+                  <option value="">Select one</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                  <option value="not-sure">Not sure</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="budget">Budget Range</label>
+                <select id="budget" name="budget" required>
+                  <option value="">Select one</option>
+                  <option value="300-500">$300–$500</option>
+                  <option value="500-1000">$500–$1,000</option>
+                  <option value="1000-plus">$1,000+</option>
+                  <option value="not-sure">Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="timeline">Preferred Timeline</label>
+                <input
+                  type="text"
+                  id="timeline"
+                  name="timeline"
+                  placeholder="Example: Within 2–4 weeks"
+                />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="pages">Pages Needed</label>
+              <input
+                type="text"
+                id="pages"
+                name="pages"
+                placeholder="Example: Home, About, Services, Contact"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="project-description">Tell me about your project</label>
+              <textarea
+                id="project-description"
+                name="project-description"
+                rows="6"
+                placeholder="Tell me about your business, your goals, and what kind of website you want."
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-field">
+              <label for="notes">Anything else I should know?</label>
+              <textarea
+                id="notes"
+                name="notes"
+                rows="4"
+                placeholder="Share links, inspiration, features you want, or anything important."
+              ></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Send Inquiry</button>
+
+            <p class="form-note">
+              I’ll review your project and get back to you as soon as possible.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

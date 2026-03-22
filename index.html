@@ -4,300 +4,344 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kolbrún Davis | Portfolio</title>
+  <meta
+    name="description"
+    content="Portfolio of Kolbrún Davis, a Computer Science graduate building polished websites, branded experiences, and interactive frontend projects."
+  />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="cursor-light"></div>
 
-  <header class="site-header">
-    <div class="container nav">
-      <h1 class="logo">Kolbrún Davis</h1>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <div class="profile-block">
+          <div class="profile-image">
+            <img src="images/me.jpg" alt="Portrait of Kolbrún Davis" />
+          </div>
 
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </header>
+          <p class="status-badge">
+            <span class="status-dot"></span>
+            Open to work
+          </p>
 
-  <section class="hero">
-    <div class="container hero-grid">
+          <h1>Kolbrún Davis</h1>
+          <p class="title">Frontend Developer · Bachelor of Science in Computer Science</p>
 
-      <div class="hero-left">
-        <p class="eyebrow">Hello, I'm</p>
-        <h2>Kolbrún Davis</h2>
-        <p class="hero-role">Frontend-focused developer building polished websites, branded experiences, and interactive project concepts.</p>
+          <p class="intro">
+            I build polished websites, branded experiences, and interactive project
+            concepts with a strong focus on clean design, structure, and usability.
+          </p>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#resume">Resume</a>
+            <a href="work-with-me.html">Work With Me</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+        <div class="sidebar-meta">
+          <div class="mini-card">
+            <span class="mini-label">Education</span>
+            <strong>Háskólinn í Reykjavík</strong>
+            <small>2025 · Bachelor’s of Science in Computer Science</small>
+          </div>
+
+          <div class="mini-card">
+            <span class="mini-label">Focus</span>
+            <strong>Frontend &amp; UI</strong>
+            <small>Creative, polished web experiences</small>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/Kolla95" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="mailto:kolbrundavis@gmail.com?subject=Portfolio%20Inquiry" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Resume">
+            <i class="fa-solid fa-file-lines"></i>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section class="hero-card">
+        <p class="eyebrow">Portfolio</p>
+        <h2>Building clean, creative, and professional web experiences.</h2>
         <p class="hero-text">
-         I build portfolio-ready projects that combine clean UI, branding, and practical structure.
-         I’m focused on growing my frontend skills through real work that feels intentional,
-        professional, and user-centered.
+          I’m a Computer Science graduate focused on frontend development, project-based
+          learning, and polished digital experiences that feel intentional,
+          user-friendly, and visually strong.
         </p>
 
-        <div class="hero-buttons">
+       <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">See My Work</a>
-          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          <a href="work-with-me.html" class="btn btn-secondary">Work With Me</a>
         </div>
-      </div>
+        <div class="stats">
+          <div class="stat-card">
+            <h3>4</h3>
+            <p>Featured Projects</p>
+          </div>
 
-      <div class="hero-right">
-        <div class="hero-shape">
-          <div class="photo-placeholder">
-            <img src="images/me.jpg" alt="Portrait of Kolbrún Davis">
+          <div class="stat-card">
+            <h3>Bachelor’s</h3>
+            <p>Computer Science</p>
+          </div>
+
+          <div class="stat-card">
+            <h3>2025</h3>
+            <p>Graduate</p>
           </div>
         </div>
-      </div>
+      </section>
 
-    </div>
-
-    <div class="container stats">
-      <div class="stat-card">
-        <h3>4</h3>
-        <p>Featured Projects</p>
-      </div>
-
-      <div class="stat-card">
-        <h3>HTML</h3>
-        <p>CSS & UI Focus</p>
-      </div>
-
-      <div class="stat-card">
-        <h3>100%</h3>
-        <p>Committed to Learning</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-
-      <div class="info-card about-card">
-        <p>
-          I’m currently learning full-stack web development and building projects that help me
-          improve my skills in HTML, CSS, JavaScript, design, and problem solving.
-        </p>
-
-        <p>
-          I enjoy creating projects that feel both creative and useful, and I’m especially drawn
-          to work that combines clean design, branding, and interactive ideas. My long-term goal
-          is to grow into professional web development work and continue building strong real-world projects.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" class="section section-soft">
-    <div class="container">
-      <h2 class="section-title">Skills</h2>
-
-      <div class="card-grid three-up">
-        <div class="info-card">
-          <h3>Frontend</h3>
-          <p>HTML, CSS, responsive layouts, beginner JavaScript, structured page design</p>
+      <section id="about" class="content-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">About</p>
+            <h2 class="section-title">About Me</h2>
+          </div>
         </div>
 
-        <div class="info-card">
-          <h3>Tools</h3>
-          <p>VS Code, GitHub, browser dev tools, design mockups, portfolio project building</p>
+        <div class="card about-card">
+          <p>
+            I’m a Computer Science graduate building projects that help me grow my skills in
+            HTML, CSS, JavaScript, design, and problem solving.
+          </p>
+
+          <p>
+            I enjoy creating work that feels both creative and useful, and I’m especially drawn
+            to projects that combine clean design, branding, and interactive ideas.
+          </p>
+
+          <p>
+            My long-term goal is to grow into professional web development work and continue
+            building strong real-world projects that feel polished and user-centered.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills" class="content-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Skills</p>
+            <h2 class="section-title">Skills &amp; Strengths</h2>
+          </div>
         </div>
 
-        <div class="info-card">
-          <h3>Strengths</h3>
-          <p>Creative thinking, persistence, visual design sense, project ideas, willingness to learn</p>
+        <div class="skills-list">
+          <span class="skill-pill">HTML</span>
+          <span class="skill-pill">CSS</span>
+          <span class="skill-pill">Responsive Layouts</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">GitHub</span>
+          <span class="skill-pill">VS Code</span>
+          <span class="skill-pill">UI Design</span>
+          <span class="skill-pill">Branding</span>
+          <span class="skill-pill">Creative Problem Solving</span>
+          <span class="skill-pill">Project Building</span>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section id="projects" class="section">
-    <div class="container">
-      <div class="section-heading">
-        <div>
-          <p class="section-kicker">Portfolio Work</p>
-          <h2 class="section-title">Featured Projects</h2>
+      <section id="projects" class="content-section projects-section">
+        <div class="projects-topbar">
+          <div class="projects-title-wrap">
+            <h2 class="projects-title">Projects <span>(4)</span></h2>
+          </div>
+
+          <div class="slider-controls">
+            <button class="slider-arrow" id="prevBtn" aria-label="Previous projects">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="slider-arrow" id="nextBtn" aria-label="Next projects">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
         </div>
 
-        <p class="section-subtext">
-          A few projects that reflect both my design style and the kind of work I want to keep building.
-        </p>
-      </div>
+        <div class="projects-slider">
+          <div class="projects-viewport">
+            <div class="projects-track" id="projectsTrack">
+              <article class="project-card">
+                <img src="images/morph.png" class="project-image" alt="Morph AI project preview" />
+                <div class="project-content">
+                  <h3>Morph AI Assistant</h3>
+                  <p class="project-type">Desktop AI Concept</p>
 
-      <div class="project-grid">
+                  <div class="project-links">
+                    <a href="Morph-showcase/index.html" aria-label="Open Morph project">
+                      <i class="fa-solid fa-globe"></i>
+                    </a>
+                    <a
+                      href="https://github.com/Kolla95/morph-showcase"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="View Morph code"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
 
-        <article class="project-card">
-          <img src="images/morph.png" class="project-image" alt="Morph AI project preview">
+              <article class="project-card">
+                <img src="images/kt.png" class="project-image" alt="KT Catch and Collect preview" />
+                <div class="project-content">
+                  <h3>KT Catch &amp; Collect</h3>
+                  <p class="project-type">Pokémon Storefront</p>
 
-          <div class="project-content">
-            <div class="project-badge">Featured Project</div>
-            <h3>Morph AI Assistant</h3>
-         
-            <p class="project-role">
-             UI Design • Product Concept • Interactive Assistant
-           </p>
+                  <div class="project-links">
+                    <a href="KT-Catch-Collect/index.html" aria-label="Open KT Catch and Collect">
+                      <i class="fa-solid fa-globe"></i>
+                    </a>
+                    <a
+                      href="https://github.com/Kolla95/kt-catch-collect"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="View KT Catch and Collect code"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
 
-            <p class="project-summary">
-              A custom project showcase built around Morph, a desktop AI assistant concept focused on
-              guided interaction, product-style UI, and structured user flows.
-            </p>
+              <article class="project-card">
+                <img src="images/petstore.png" class="project-image" alt="Paw and Clover preview" />
+                <div class="project-content">
+                  <h3>Paw &amp; Clover</h3>
+                  <p class="project-type">Pet Store Website</p>
 
-            <div class="project-meta">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>UI Design</span>
+                  <div class="project-links">
+                    <a href="petstore/index.html" aria-label="Open Paw and Clover">
+                      <i class="fa-solid fa-globe"></i>
+                    </a>
+                    <a
+                      href="https://github.com/Kolla95/Petstore"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="View Paw and Clover code"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <img src="images/icecream.png" class="project-image" alt="Sunny Scoops preview" />
+                <div class="project-content">
+                  <h3>Sunny Scoops</h3>
+                  <p class="project-type">Ice Cream Brand Site</p>
+
+                  <div class="project-links">
+                    <a href="icecream/index.html" aria-label="Open Sunny Scoops">
+                      <i class="fa-solid fa-globe"></i>
+                    </a>
+                    <a
+                      href="https://github.com/Kolla95/sunny-scoops"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="View Sunny Scoops code"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
             </div>
-
-            <div class="project-buttons">
-              <a href="Morph-showcase/index.html" class="btn btn-primary">View Project</a>
-             <a href="https://github.com/Kolla95/morph-showcase" target="_blank" class="btn btn-secondary">
-               View Code
-             </a>
-           </div>
           </div>
-        </article>
 
-        <article class="project-card">
-          <img src="images/kt.png" class="project-image" alt="KT Catch &amp; Collect project preview">
-
-          <div class="project-content">
-            <div class="project-badge gold">Brand Concept</div>
-            <h3>KT Catch &amp; Collect</h3>
-           
-             <p class="project-role">
-               Frontend Design • Branding • Themed Storefront
-             </p>
-
-            <p class="project-summary">
-              A Pokémon-themed storefront concept designed to show branding, themed layout,
-              frontend structure, and a more playful collectible-focused web experience.
-            </p>
-
-            <div class="project-meta">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>Branding</span>
-            </div>
-
-           <div class="project-buttons">
-              <a href="KT-Catch-Collect/index.html" class="btn btn-primary">View Project</a>
-            <a href="https://github.com/Kolla95/kt-catch-collect" target="_blank" class="btn btn-secondary">
-               View Code
-             </a>
-           </div>
+          <div class="slider-dots">
+            <button class="dot active" data-index="0" aria-label="Go to first slide"></button>
+            <button class="dot" data-index="1" aria-label="Go to second slide"></button>
           </div>
-        </article>
+        </div>
+      </section>
+
+      <section id="resume" class="content-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Resume</p>
+            <h2 class="section-title">Resume Summary</h2>
+          </div>
+        </div>
+
+        <div class="card resume-card">
+          <p><strong>Current Focus:</strong> Building frontend projects and improving my web development skills through hands-on work.</p>
+          <p><strong>Skills Growing In:</strong> HTML, CSS, responsive layouts, beginner JavaScript, UI design, and project structure.</p>
+          <p><strong>Education:</strong> Bachelor’s of Science in Computer Science, Háskólinn í Reykjavík (2025).</p>
+          <p><strong>Goal:</strong> Continue building professional-looking websites and grow into freelance, junior developer, or creative web roles.</p>
+        </div>
+      </section>
 
 
-<article class="project-card">
-  <img src="images/petstore.png" class="project-image" alt="Paw & Clover pet store preview">
+      <section id="contact" class="content-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2 class="section-title">Let’s Connect</h2>
+          </div>
+        </div>
 
-  <div class="project-content">
-    <div class="project-badge">Store Concept</div>
-    <h3>Paw &amp; Clover</h3>
+        <div class="card contact-clean">
+          <p class="contact-text">
+            I’m open to opportunities, collaborations, and freelance work.
+            Feel free to reach out if you’d like to work together or talk about a project.
+          </p>
 
-    <p class="project-role">
-      Frontend Design • Multi-Page Store • JavaScript Interactions
-    </p>
+          <p class="contact-email">
+            <a href="mailto:kolbrundavis@gmail.com">
+              kolbrundavis@gmail.com
+            </a>
+          </p>
 
-    <p class="project-summary">
-      A cozy multi-page pet store concept built to feel like a realistic small business website,
-      with category pages, search, filters, and a more complete storefront experience.
-    </p>
+          <div class="contact-actions">
+            <a href="mailto:kolbrundavis@gmail.com" class="btn btn-primary">
+              Email Me
+            </a>
 
-    <div class="project-meta">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-    </div>
+            <button class="btn btn-secondary" id="copyEmailBtn" type="button">
+              Copy Email
+            </button>
 
-    <div class="project-buttons">
-      <a href="petstore/index.html" class="btn btn-primary">View Project</a>
-      <a href="https://github.com/Kolla95/Petstore"
-   target="_blank"
-   rel="noopener"
-   class="btn btn-secondary">
-   View Code
-</a>
-    </div>
+            <a
+              href="https://github.com/Kolla95"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-secondary"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   </div>
-</article>
 
-<article class="project-card">
-  <img src="images/icecream.png" class="project-image" alt="Sunny Scoops ice cream shop preview">
-
-  <div class="project-content">
-    <div class="project-badge gold">Brand Concept</div>
-    <h3>Sunny Scoops</h3>
-
-    <p class="project-role">
-      Frontend Design • Branding • Small Business Website
-    </p>
-
-    <p class="project-summary">
-      A pastel-inspired ice cream shop website focused on playful branding, clean layout,
-      and a polished customer-friendly small business design.
-    </p>
-
-    <div class="project-meta">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>Branding</span>
-    </div>
-
-    <div class="project-buttons">
-      <a href="icecream/index.html" class="btn btn-primary">View Project</a>
-      <a href="https://github.com/Kolla95/petstore"
-   target="_blank"
-   rel="noopener"
-   class="btn btn-secondary">
-   View Code
-</a>
-    </div>
-  </div>
-</article>
-      </div>
-    </div>
-  </section>
-
-  <section id="resume" class="section section-soft">
-    <div class="container">
-      <h2 class="section-title">Resume Summary</h2>
-
-      <div class="info-card resume-card">
-        <p><strong>Current Focus:</strong> Building frontend projects and improving my web development skills through hands-on work.</p>
-        <p><strong>Skills Growing In:</strong> HTML, CSS, responsive layouts, beginner JavaScript, UI design, and project structure.</p>
-        <p><strong>Goal:</strong> Continue building professional-looking websites and grow into freelance, junior developer, or creative web roles.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title">Contact Me</h2>
-
-      <div class="contact-box">
-        <p>
-          Email:
-          <a href="mailto:kolbrun.skr@gmail.com?subject=Portfolio Inquiry">
-            kolbrun.skr@gmail.com
-          </a>
-        </p>
-
-        <p>
-          GitHub:
-          <a href="https://github.com/kolla95" target="_blank" rel="noopener noreferrer">
-            github.com/kolla95
-          </a>
-        </p>
-      </div>
-    </div>
-  </section>
-
+  <script src="script.js"></script>
 </body>
 </html>
