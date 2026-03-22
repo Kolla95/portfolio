@@ -36,73 +36,86 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextBtn = document.getElementById("nextBtn");
   const dotsWrap = document.querySelector(".slider-dots");
 
-  if (!track || !prevBtn || !nextBtn || !dotsWrap) return;
+  if (!track || !prevBtn || !nextBtn) return;
 
-  let currentSlide = 0;
-  let totalSlides = window.innerWidth <= 900 ? 4 : 2;
+  const cards = Array.from(track.querySelectorAll(".project-card"));
+  let currentIndex = 0;
 
-  function updateSlider(index) {
-    currentSlide = index;
-
-    if (window.innerWidth <= 900) {
-      track.style.transform = `translateX(calc(-${index * 100}% - ${index * 22}px))`;
-    } else {
-      track.style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    const dots = document.querySelectorAll(".dot");
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("active", i === index);
-    });
+  function getCardsPerView() {
+    return window.innerWidth <= 900 ? 1 : 2;
   }
 
-  function bindDots() {
-    const dots = document.querySelectorAll(".dot");
-    dots.forEach((dot) => {
-      dot.addEventListener("click", () => {
-        const index = Number(dot.dataset.index);
-        updateSlider(index);
-      });
+  function getMaxIndex() {
+    return Math.max(0, cards.length - getCardsPerView());
+  }
+
+  function updateDots() {
+    if (!dotsWrap) return;
+
+    const dots = dotsWrap.querySelectorAll(".dot");
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === currentIndex);
     });
   }
 
   function renderDots() {
-    if (window.innerWidth <= 900) {
-      dotsWrap.innerHTML = `
-        <button class="dot ${currentSlide === 0 ? "active" : ""}" data-index="0" aria-label="Go to slide 1"></button>
-        <button class="dot ${currentSlide === 1 ? "active" : ""}" data-index="1" aria-label="Go to slide 2"></button>
-        <button class="dot ${currentSlide === 2 ? "active" : ""}" data-index="2" aria-label="Go to slide 3"></button>
-        <button class="dot ${currentSlide === 3 ? "active" : ""}" data-index="3" aria-label="Go to slide 4"></button>
-      `;
-    } else {
-      if (currentSlide > 1) currentSlide = 1;
+    if (!dotsWrap) return;
 
-      dotsWrap.innerHTML = `
-        <button class="dot ${currentSlide === 0 ? "active" : ""}" data-index="0" aria-label="Go to first slide"></button>
-        <button class="dot ${currentSlide === 1 ? "active" : ""}" data-index="1" aria-label="Go to second slide"></button>
-      `;
+    const maxIndex = getMaxIndex();
+    dotsWrap.innerHTML = "";
+
+    for (let i = 0; i <= maxIndex; i += getCardsPerView()) {
+      const dot = document.createElement("button");
+      dot.className = "dot";
+      dot.type = "button";
+      dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
+      dot.dataset.index = i;
+
+      dot.addEventListener("click", () => {
+        currentIndex = Number(dot.dataset.index);
+        updateSlider();
+      });
+
+      dotsWrap.appendChild(dot);
     }
 
-    bindDots();
+    updateDots();
   }
 
-  function refreshSliderState() {
-    totalSlides = window.innerWidth <= 900 ? 4 : 2;
-    renderDots();
-    updateSlider(currentSlide);
+  function updateSlider() {
+    const firstCard = cards[0];
+    if (!firstCard) return;
+
+    const trackStyles = window.getComputedStyle(track);
+    const gap = parseFloat(trackStyles.gap) || 28;
+
+    const moveAmount = currentIndex * (firstCard.offsetWidth + gap);
+    track.style.transform = `translateX(-${moveAmount}px)`;
+
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= getMaxIndex();
+
+    updateDots();
   }
 
   prevBtn.addEventListener("click", () => {
-    const newIndex = currentSlide === 0 ? totalSlides - 1 : currentSlide - 1;
-    updateSlider(newIndex);
+    const cardsPerView = getCardsPerView();
+    currentIndex = Math.max(0, currentIndex - cardsPerView);
+    updateSlider();
   });
 
   nextBtn.addEventListener("click", () => {
-    const newIndex = currentSlide === totalSlides - 1 ? 0 : currentSlide + 1;
-    updateSlider(newIndex);
+    const cardsPerView = getCardsPerView();
+    currentIndex = Math.min(getMaxIndex(), currentIndex + cardsPerView);
+    updateSlider();
   });
 
-  window.addEventListener("resize", refreshSliderState);
+  window.addEventListener("resize", () => {
+    currentIndex = Math.min(currentIndex, getMaxIndex());
+    renderDots();
+    updateSlider();
+  });
 
-  refreshSliderState();
+  renderDots();
+  updateSlider();
 });
