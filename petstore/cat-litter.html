@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cat Litter | Paw & Clover</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="store-topbar">
+    Free local delivery on orders over $25 • Low-dust litter and odor control options
+  </div>
+
+  <header class="store-header">
+    <div class="container store-nav">
+      <a href="index.html" class="store-logo">Paw & Clover</a>
+
+      <nav>
+        <ul class="store-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cats.html" class="active-link">Cats</a></li>
+          <li><a href="dogs.html">Dogs</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="product-page-hero">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="cats.html">Cats</a>
+        <span>/</span>
+        <span>Cat Litter</span>
+      </div>
+
+      <div class="product-page-head">
+        <div>
+          <p class="department-label">Cat Litter</p>
+          <h1>Clean, simple litter options for every setup</h1>
+          <p class="page-subtext">
+            Shop clumping, lightweight, odor-control, and multi-cat litter
+            options designed to make daily cleanup easier.
+          </p>
+        </div>
+
+        <div class="results-box">
+          <strong id="cat-litter-count">8 items</strong>
+          <p>Sorted by featured</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="catalog-section">
+    <div class="container catalog-grid">
+      <aside class="catalog-sidebar">
+        <div class="catalog-panel">
+          <h3>Browse</h3>
+          <ul class="catalog-links">
+            <li><a href="cat-food.html">Cat Food</a></li>
+            <li><a href="cat-toys.html">Cat Toys</a></li>
+            <li><a href="cat-litter.html" class="active-side-link">Cat Litter</a></li>
+            <li><a href="cat-bed.html">Cat Beds</a></li>
+          </ul>
+        </div>
+
+        <div class="catalog-panel">
+          <h3>Filter by type</h3>
+          <div class="filter-pills filter-group" data-filter-group="type">
+            <button type="button" class="toolbar-chip filter-btn active-chip" data-filter="all">All</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="clumping">Clumping</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="lightweight">Lightweight</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="multi-cat">Multi-Cat</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="low-dust">Low Dust</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="unscented">Unscented</button>
+          </div>
+        </div>
+
+        <div class="catalog-panel">
+          <h3>Filter by price</h3>
+          <div class="filter-pills filter-group" data-filter-group="price">
+            <button type="button" class="toolbar-chip filter-btn active-chip" data-filter="all">All</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="under-10">Under $10</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="10-20">$10 - $20</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="over-20">Over $20</button>
+          </div>
+        </div>
+  
+   	<div class="catalog-panel">
+ 	 <button type="button" class="toolbar-chip clear-filters-btn" id="clear-cat-litter-filters">
+    	 Clear Filters
+  	 </button>
+	 </div>
+
+        <div class="catalog-panel">
+          <h3>Quick note</h3>
+          <p>
+            This page is designed to feel like a believable pet store category, not just a landing page.
+          </p>
+        </div>
+      </aside>
+
+      <main class="catalog-main">
+        <div class="catalog-toolbar">
+          <div class="toolbar-left">
+            <span class="toolbar-chip active-chip">Interactive filters enabled</span>
+          </div>
+
+          <div class="toolbar-right">
+            <label for="sort-litter">Sort:</label>
+            <select id="sort-litter">
+              <option>Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Newest</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="catalog-products" id="cat-litter-products">
+          <article class="catalog-card" data-type="clumping" data-price="14.99" data-date="2026-03-20">
+            <div class="catalog-thumb thumb-cream"></div>
+            <p class="product-type">Clumping</p>
+            <h3>Fresh Clump Litter</h3>
+            <p>Easy-scoop clumping litter with low-dust performance.</p>
+            <div class="catalog-meta">
+              <span>$14.99</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="lightweight" data-price="16.49" data-date="2026-03-17">
+            <div class="catalog-thumb thumb-blue"></div>
+            <p class="product-type">Lightweight</p>
+            <h3>Cloud Light Litter</h3>
+            <p>Lightweight formula that is easier to pour and carry.</p>
+            <div class="catalog-meta">
+              <span>$16.49</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="unscented" data-price="15.49" data-date="2026-03-21">
+            <div class="catalog-thumb thumb-sage"></div>
+            <p class="product-type">Unscented</p>
+            <h3>Pure Unscented Blend</h3>
+            <p>Simple unscented litter for sensitive cats and smaller spaces.</p>
+            <div class="catalog-meta">
+              <span>$15.49</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="multi-cat" data-price="18.99" data-date="2026-03-12">
+            <div class="catalog-thumb thumb-blush"></div>
+            <p class="product-type">Multi-Cat</p>
+            <h3>Multi-Cat Fresh Guard</h3>
+            <p>Extra odor control designed for homes with multiple cats.</p>
+            <div class="catalog-meta">
+              <span>$18.99</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="low-dust" data-price="15.99" data-date="2026-03-18">
+            <div class="catalog-thumb thumb-cream"></div>
+            <p class="product-type">Low Dust</p>
+            <h3>Soft Step Low Dust</h3>
+            <p>Gentle low-dust formula made for cleaner daily use.</p>
+            <div class="catalog-meta">
+              <span>$15.99</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="clumping" data-price="13.99" data-date="2026-03-10">
+            <div class="catalog-thumb thumb-blue"></div>
+            <p class="product-type">Clumping</p>
+            <h3>Quick Scoop Daily Litter</h3>
+            <p>Fast-clumping option that helps simplify cleanup time.</p>
+            <div class="catalog-meta">
+              <span>$13.99</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="lightweight" data-price="17.49" data-date="2026-03-15">
+            <div class="catalog-thumb thumb-sage"></div>
+            <p class="product-type">Lightweight</p>
+            <h3>Breeze Lift Formula</h3>
+            <p>Easy-carry litter with dependable odor-control support.</p>
+            <div class="catalog-meta">
+              <span>$17.49</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="multi-cat" data-price="19.49" data-date="2026-03-08">
+            <div class="catalog-thumb thumb-blush"></div>
+            <p class="product-type">Multi-Cat</p>
+            <h3>Home Harmony Litter</h3>
+            <p>Designed to help manage odor and daily scooping in busy homes.</p>
+            <div class="catalog-meta">
+              <span>$19.49</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <footer class="store-footer">
+    <div class="container store-footer-grid">
+      <div>
+        <h3>Paw & Clover</h3>
+        <p>Cozy pet essentials for everyday life.</p>
+      </div>
+
+      <div>
+        <p><strong>Shop</strong></p>
+        <p><a href="cats.html">Cats</a></p>
+        <p><a href="dogs.html">Dogs</a></p>
+      </div>
+
+      <div>
+        <p><strong>Contact</strong></p>
+        <p>hello@pawandclover.com</p>
+        <p>(555) 987-2244</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

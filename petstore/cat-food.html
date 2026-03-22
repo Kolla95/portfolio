@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cat Food | Paw & Clover</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="store-topbar">
+    Free local delivery on orders over $25 • Healthy cat food for every stage
+  </div>
+
+  <header class="store-header">
+    <div class="container store-nav">
+      <a href="index.html" class="store-logo">Paw & Clover</a>
+
+      <nav>
+        <ul class="store-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cats.html" class="active-link">Cats</a></li>
+          <li><a href="dogs.html">Dogs</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="product-page-hero">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="cats.html">Cats</a>
+        <span>/</span>
+        <span>Cat Food</span>
+      </div>
+
+      <div class="product-page-head">
+        <div>
+          <p class="department-label">Cat Food</p>
+          <h1>Everyday meals for happy, healthy cats</h1>
+          <p class="page-subtext">
+            Browse wet food, dry food, kitten options, and wholesome recipes
+            designed for cats of every age and routine.
+          </p>
+        </div>
+
+        <div class="results-box">
+          <strong id="cat-food-count">8 items</strong>
+         <p>Sorted by featured</p>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="catalog-section">
+    <div class="container catalog-grid">
+      <aside class="catalog-sidebar">
+        <div class="catalog-panel">
+          <h3>Browse</h3>
+          <ul class="catalog-links">
+            <li><a href="cat-food.html" class="active-side-link">Cat Food</a></li>
+            <li><a href="cat-toys.html">Cat Toys</a></li>
+            <li><a href="cat-litter.html">Cat Litter</a></li>
+            <li><a href="cat-bed.html">Cat Beds</a></li>
+          </ul>
+        </div>
+
+        <div class="catalog-panel">
+          <h3>Filter by type</h3>
+          <div class="filter-pills filter-group" data-filter-group="type">
+            <button type="button" class="toolbar-chip filter-btn active-chip" data-filter="all">All</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="wet">Wet Food</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="dry">Dry Food</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="kitten">Kitten</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="grain-free">Grain-Free</button>
+          </div>
+        </div>
+
+        <div class="catalog-panel">
+          <h3>Filter by price</h3
+          <div class="filter-pills filter-group" data-filter-group="price">
+            <button type="button" class="toolbar-chip filter-btn active-chip" data-filter="all">All</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="under-10">Under $10</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="10-20">$10 - $20</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="over-20">Over $20</button>
+          </div>
+        </div>
+         
+
+
+         <div class="catalog-panel">
+         <button type="button" class="toolbar-chip clear-filters-btn" id="clear-cat-food-filters">
+         Clear Filters
+          </button>
+          </div>
+
+        <div class="catalog-panel">
+          <h3>Quick note</h3>
+          <p>
+            This page is part of a multi-page storefront demo built for a portfolio project.
+          </p>
+        </div>
+      </aside>
+
+      <main class="catalog-main">
+        <div class="catalog-toolbar">
+          <div class="toolbar-left">
+            <span class="toolbar-chip active-chip">Interactive filters enabled</span>
+          </div>
+
+          <div class="toolbar-right">
+            <label for="sort-food">Sort:</label>
+            <select id="sort-food">
+              <option>Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Newest</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="catalog-products" id="cat-food-products">
+          <article class="catalog-card" data-type="wet" data-price="3.49" data-date="2026-03-20">
+            <div class="catalog-thumb thumb-blush"></div>
+            <p class="product-type">Wet Food</p>
+            <h3>Chicken Dinner Wet Food</h3>
+            <p>Soft savory recipe made for easy mealtime and simple ingredients.</p>
+            <div class="catalog-meta">
+              <span>$3.49</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="dry" data-price="18.99" data-date="2026-03-15">
+            <div class="catalog-thumb thumb-cream"></div>
+            <p class="product-type">Dry Food</p>
+            <h3>Indoor Crunch Dry Food</h3>
+            <p>Balanced daily food for indoor cats with protein-rich ingredients.</p>
+            <div class="catalog-meta">
+              <span>$18.99</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="kitten" data-price="16.49" data-date="2026-03-21">
+            <div class="catalog-thumb thumb-sage"></div>
+            <p class="product-type">Kitten Food</p>
+            <h3>Soft Start Kitten Recipe</h3>
+            <p>Gentle kitten formula designed for growing cats and smaller bites.</p>
+            <div class="catalog-meta">
+              <span>$16.49</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="wet" data-price="3.79" data-date="2026-03-12">
+            <div class="catalog-thumb thumb-blue"></div>
+            <p class="product-type">Wet Food</p>
+            <h3>Turkey Garden Pâté</h3>
+            <p>Rich pâté style meal with a smooth texture cats love.</p>
+            <div class="catalog-meta">
+              <span>$3.79</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="dry" data-price="19.99" data-date="2026-03-10">
+            <div class="catalog-thumb thumb-blush"></div>
+            <p class="product-type">Dry Food</p>
+            <h3>Salmon Indoor Blend</h3>
+            <p>Crunchy recipe with salmon flavor and balanced nutrition.</p>
+            <div class="catalog-meta">
+              <span>$19.99</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="grain-free" data-price="21.49" data-date="2026-03-18">
+            <div class="catalog-thumb thumb-cream"></div>
+            <p class="product-type">Grain-Free</p>
+            <h3>Chicken Grain-Free Bowl</h3>
+            <p>Simple grain-free recipe with protein-first ingredients.</p>
+            <div class="catalog-meta">
+              <span>$21.49</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="wet" data-price="3.99" data-date="2026-03-17">
+            <div class="catalog-thumb thumb-sage"></div>
+            <p class="product-type">Wet Food</p>
+            <h3>Tuna Supper Cuts</h3>
+            <p>Flavorful tuna meal served in a soft, easy-to-eat texture.</p>
+            <div class="catalog-meta">
+              <span>$3.99</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="dry" data-price="17.99" data-date="2026-03-08">
+            <div class="catalog-thumb thumb-blue"></div>
+            <p class="product-type">Dry Food</p>
+            <h3>Daily Balance Cat Kibble</h3>
+            <p>Everyday dry food for adult cats with a balanced formula.</p>
+            <div class="catalog-meta">
+              <span>$17.99</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <footer class="store-footer">
+    <div class="container store-footer-grid">
+      <div>
+        <h3>Paw & Clover</h3>
+        <p>Cozy pet essentials for everyday life.</p>
+      </div>
+
+      <div>
+        <p><strong>Shop</strong></p>
+        <p><a href="cats.html">Cats</a></p>
+        <p><a href="dogs.html">Dogs</a></p>
+      </div>
+
+      <div>
+        <p><strong>Contact</strong></p>
+        <p>hello@pawandclover.com</p>
+        <p>(555) 987-2244</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

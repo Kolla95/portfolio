@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dog Toys | Paw & Clover</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="store-topbar">
+    Free local delivery on orders over $25 • Dog toys for playful pups
+  </div>
+
+  <header class="store-header">
+    <div class="container store-nav">
+      <a href="index.html" class="store-logo">Paw & Clover</a>
+
+      <nav>
+        <ul class="store-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cats.html">Cats</a></li>
+          <li><a href="dogs.html" class="active-link">Dogs</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="product-page-hero">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="dogs.html">Dogs</a>
+        <span>/</span>
+        <span>Dog Toys</span>
+      </div>
+
+      <div class="product-page-head">
+        <div>
+          <p class="department-label">Dog Toys</p>
+          <h1>Playtime favorites for active dogs</h1>
+          <p class="page-subtext">
+            Explore rope toys, plush favorites, chew toys, and fetch-ready picks
+            designed for everyday play and enrichment.
+          </p>
+        </div>
+
+        <div class="results-box">
+          <strong id="dog-toy-count">8 items</strong>
+          <p>Sorted by featured</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="catalog-section">
+    <div class="container catalog-grid">
+      <aside class="catalog-sidebar">
+        <div class="catalog-panel">
+          <h3>Browse</h3>
+          <ul class="catalog-links">
+            <li><a href="dog-food.html">Dog Food</a></li>
+            <li><a href="dog-toys.html" class="active-side-link">Dog Toys</a></li>
+            <li><a href="dog-bed.html">Dog Beds</a></li>
+          </ul>
+        </div>
+
+        <div class="catalog-panel">
+          <h3>Filter by type</h3>
+          <div class="filter-pills filter-group" data-filter-group="type">
+            <button type="button" class="toolbar-chip filter-btn active-chip" data-filter="all">All</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="rope">Rope</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="plush">Plush</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="chew">Chew</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="fetch">Fetch</button>
+          </div>
+        </div>
+
+        <div class="catalog-panel">
+          <h3>Filter by price</h3>
+          <div class="filter-pills filter-group" data-filter-group="price">
+            <button type="button" class="toolbar-chip filter-btn active-chip" data-filter="all">All</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="under-10">Under $10</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="10-20">$10 - $20</button>
+            <button type="button" class="toolbar-chip filter-btn" data-filter="over-20">Over $20</button>
+          </div>
+        </div>
+	
+
+	<div class="catalog-panel">
+  	 <button type="button" class="toolbar-chip clear-filters-btn" id="clear-dog-toy-filters">
+    	 Clear Filters
+  	 </button>
+	 </div>
+
+        <div class="catalog-panel">
+          <h3>Quick note</h3>
+          <p>
+            This product page is part of a portfolio storefront demo and is designed
+            to show reusable filtering and sorting across categories.
+          </p>
+        </div>
+      </aside>
+
+      <main class="catalog-main">
+        <div class="catalog-toolbar">
+          <div class="toolbar-left">
+            <span class="toolbar-chip active-chip">Interactive filters enabled</span>
+          </div>
+
+          <div class="toolbar-right">
+            <label for="sort-dog-toys">Sort:</label>
+            <select id="sort-dog-toys">
+              <option>Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Newest</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="catalog-products" id="dog-toy-products">
+          <article class="catalog-card" data-type="rope" data-price="9.99" data-date="2026-03-20">
+            <div class="catalog-thumb thumb-sage"></div>
+            <p class="product-type">Rope Toy</p>
+            <h3>Soft Rope Tug Toy</h3>
+            <p>Classic tug toy for interactive play and gentle chewing.</p>
+            <div class="catalog-meta">
+              <span>$9.99</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="plush" data-price="11.99" data-date="2026-03-18">
+            <div class="catalog-thumb thumb-blush"></div>
+            <p class="product-type">Plush Toy</p>
+            <h3>Squeaky Bone Plush</h3>
+            <p>Soft squeaky plush toy made for fetch, toss, and cuddle time.</p>
+            <div class="catalog-meta">
+              <span>$11.99</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="chew" data-price="8.49" data-date="2026-03-21">
+            <div class="catalog-thumb thumb-cream"></div>
+            <p class="product-type">Chew Toy</p>
+            <h3>Chew Ring Classic</h3>
+            <p>Durable chew ring designed for everyday play and light chewing.</p>
+            <div class="catalog-meta">
+              <span>$8.49</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="fetch" data-price="7.99" data-date="2026-03-15">
+            <div class="catalog-thumb thumb-blue"></div>
+            <p class="product-type">Fetch Toy</p>
+            <h3>Bounce Fetch Ball</h3>
+            <p>Light, playful ball made for backyard games and active dogs.</p>
+            <div class="catalog-meta">
+              <span>$7.99</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="rope" data-price="12.49" data-date="2026-03-12">
+            <div class="catalog-thumb thumb-sage"></div>
+            <p class="product-type">Rope Toy</p>
+            <h3>Double Knot Tug</h3>
+            <p>Sturdy rope toy with double knots for active tug sessions.</p>
+            <div class="catalog-meta">
+              <span>$12.49</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="plush" data-price="10.49" data-date="2026-03-10">
+            <div class="catalog-thumb thumb-blush"></div>
+            <p class="product-type">Plush Toy</p>
+            <h3>Plush Duck Squeaker</h3>
+            <p>Soft plush duck toy with a squeaker for playful indoor fun.</p>
+            <div class="catalog-meta">
+              <span>$10.49</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="chew" data-price="14.99" data-date="2026-03-17">
+            <div class="catalog-thumb thumb-cream"></div>
+            <p class="product-type">Chew Toy</p>
+            <h3>Tough Chew Stick</h3>
+            <p>Long-lasting chew toy made for dogs who love to gnaw.</p>
+            <div class="catalog-meta">
+              <span>$14.99</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-type="fetch" data-price="9.49" data-date="2026-03-08">
+            <div class="catalog-thumb thumb-blue"></div>
+            <p class="product-type">Fetch Toy</p>
+            <h3>Flying Disc Pop</h3>
+            <p>Soft flying disc toy for outdoor fetch and energetic play.</p>
+            <div class="catalog-meta">
+              <span>$9.49</span>
+              <a href="#">Add to Cart</a>
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <footer class="store-footer">
+    <div class="container store-footer-grid">
+      <div>
+        <h3>Paw & Clover</h3>
+        <p>Cozy pet essentials for everyday life.</p>
+      </div>
+
+      <div>
+        <p><strong>Shop</strong></p>
+        <p><a href="cats.html">Cats</a></p>
+        <p><a href="dogs.html">Dogs</a></p>
+      </div>
+
+      <div>
+        <p><strong>Contact</strong></p>
+        <p>hello@pawandclover.com</p>
+        <p>(555) 987-2244</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

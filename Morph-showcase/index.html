@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morph Showcase | Kolbrún Davis</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="menu-drawer" id="menuDrawer" aria-hidden="true">
+    <div class="menu-top">
+      <div class="menu-brand">
+        <div class="brand-icon">M</div>
+        <div>
+          <h2>Morph</h2>
+          <p>Project Showcase</p>
+        </div>
+      </div>
+
+      <button class="menu-close" id="closeMenuBtn" type="button" aria-label="Close menu">
+        ✕
+      </button>
+    </div>
+
+    <nav class="menu-nav">
+      <button type="button" class="nav-link" data-page="overview">Overview</button>
+      <button type="button" class="nav-link" data-page="features">Features</button>
+      <button type="button" class="nav-link" data-page="stack">Tech Stack</button>
+      <button type="button" class="nav-link" data-page="why">Why It Matters</button>
+      <button type="button" class="nav-link" data-page="contact">Contact</button>
+    </nav>
+  </aside>
+
+  <main class="site-shell">
+    <section class="page-view active" id="homePage">
+      <header class="topbar">
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          type="button"
+          aria-label="Open project navigation"
+          aria-expanded="false"
+          aria-controls="menuDrawer"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="topbar-text">
+          <p class="topbar-label">Portfolio Project</p>
+          <h1>Morph Showcase</h1>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Desktop Coaching App</p>
+          <h2>A custom TCG coaching assistant designed for guided gameplay support</h2>
+          <p>
+            Morph is a custom desktop project I built to explore Python application development,
+            product-focused UI design, and assistant workflows in a more practical, interactive way.
+          </p>
+
+          <div class="hero-actions">
+            <button class="primary-btn" type="button" onclick="showPage('overview')">View Project</button>
+            <a class="secondary-btn" href="mailto:kolbrun.skr@gmail.com">Email Me</a>
+          </div>
+
+          <div class="status-banner">
+            <strong>Status:</strong> In active development — focused on coaching workflows and interface polish.
+          </div>
+        </div>
+
+        <div class="hero-preview">
+          <div class="project-preview">
+            <div class="preview-topbar">
+              <span></span>
+              <span></span>
+              <span></span>
+              <p>Morph — TCG Coach Preview</p>
+            </div>
+
+            <div class="preview-body three-column">
+              <div class="preview-sidebar">
+                <div class="preview-title">Coach Sessions</div>
+                <div class="preview-search">Search sessions or content...</div>
+                <div class="preview-button">+ New Chat</div>
+                <div class="preview-session">
+                  <small>Current Session</small>
+                  <strong>Practice Session</strong>
+                  <span>Status: Active</span>
+                </div>
+              </div>
+
+              <div class="preview-chat">
+                <div class="preview-msg morph">
+                  <label>Morph Coach</label>
+                  <p>Welcome to Morph Coach. Ask for turn guidance, card interaction help, or battle advice.</p>
+                </div>
+
+                <div class="preview-msg user">
+                  <label>You</label>
+                  <p>What is my best move right now?</p>
+                </div>
+
+                <div class="preview-msg morph">
+                  <label>Morph Coach</label>
+                  <p>Describe your board state and available options so I can help evaluate the best play.</p>
+                </div>
+
+                <div class="preview-input-row">
+                  <div class="preview-input">Type a move, ask for help, or describe the board state...</div>
+                  <div class="preview-send">Get Guidance</div>
+                </div>
+              </div>
+
+              <div class="coach-panel">
+                <div class="coach-panel-title">Coach Panel</div>
+
+                <div class="coach-card">
+                  <small>Recommended Move</small>
+                  <p>Describe your board state to get a stronger recommendation.</p>
+                </div>
+
+                <div class="coach-card">
+                  <small>Coach Tip</small>
+                  <p>Use Morph to explain interactions, evaluate options, and practice turns.</p>
+                </div>
+
+                <div class="coach-card">
+                  <small>Session Notes</small>
+                  <p>Session active.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="simple-strip">
+        <div class="simple-card">
+          <p class="section-kicker">Quick Summary</p>
+          <h3>Why I included this in my portfolio</h3>
+          <p>
+            This project highlights Python development, desktop UI design, product thinking,
+            and the ability to build something interactive around a clear user need.
+          </p>
+        </div>
+
+        <div class="simple-card">
+          <p class="section-kicker">Explore More</p>
+          <h3>Open the full project pages</h3>
+          <p>
+            Use the hamburger menu or the View Project button to open the different Morph project sections.
+          </p>
+        </div>
+      </section>
+
+      <section class="how-it-works">
+        <p class="section-kicker">Process</p>
+        <h2>How Morph Works</h2>
+
+        <div class="steps">
+          <div class="step">
+            <h3>1. Start a Session</h3>
+            <p>Create a coaching session and begin interacting with Morph.</p>
+          </div>
+
+          <div class="step">
+            <h3>2. Describe Your Situation</h3>
+            <p>Tell Morph your board state or ask for help with a move.</p>
+          </div>
+
+          <div class="step">
+            <h3>3. Get Guidance</h3>
+            <p>Morph responds with suggestions, tips, and strategy guidance.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="page-view detail-page" id="overviewPage">
+      <div class="detail-shell">
+        <div class="detail-header">
+          <button class="back-btn" type="button" onclick="goHome()">← Back to Home</button>
+          <p class="section-kicker">Overview</p>
+          <h2>What Morph is</h2>
+        </div>
+
+        <div class="detail-card">
+          <p>
+            Morph is a custom desktop coaching assistant built to support trading card game
+            decisions through a guided interface instead of a generic chatbot layout.
+          </p>
+          <p>
+            I designed it as a more product-focused experience with a coaching flow,
+            session structure, and a clean assistant UI that feels purposeful.
+          </p>
+          <p>
+            This project helped me explore how to combine software functionality, UI design,
+            and product thinking into something that feels like a real tool instead of just a code demo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-view detail-page" id="featuresPage">
+      <div class="detail-shell">
+        <div class="detail-header">
+          <button class="back-btn" type="button" onclick="goHome()">← Back to Home</button>
+          <p class="section-kicker">Features</p>
+          <h2>What Morph can do</h2>
+        </div>
+
+        <div class="detail-grid">
+          <div class="detail-mini-card">
+            <h3>Focused Coaching UI</h3>
+            <p>Built like a desktop tool with a clear coaching layout instead of a generic assistant window.</p>
+          </div>
+
+          <div class="detail-mini-card">
+            <h3>Guided Chat Flow</h3>
+            <p>Supports turn questions, interaction help, and battle-focused coaching through conversation.</p>
+          </div>
+
+          <div class="detail-mini-card">
+            <h3>Coach Panel</h3>
+            <p>Includes recommendation space, coaching notes, and active session context.</p>
+          </div>
+
+          <div class="detail-mini-card">
+            <h3>Session-Based Design</h3>
+            <p>Organized more like a product experience than a simple chat window.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-view detail-page" id="stackPage">
+      <div class="detail-shell">
+        <div class="detail-header">
+          <button class="back-btn" type="button" onclick="goHome()">← Back to Home</button>
+          <p class="section-kicker">Tech Stack</p>
+          <h2>Tools used in the project</h2>
+        </div>
+
+        <div class="detail-list">
+          <div class="detail-list-card">
+            <h3>Python</h3>
+            <p>Used for the core application logic, assistant flow, and product behavior.</p>
+          </div>
+
+          <div class="detail-list-card">
+            <h3>Tkinter</h3>
+            <p>Used to build the desktop interface and structure the coaching layout.</p>
+          </div>
+
+          <div class="detail-list-card">
+            <h3>Custom UI / UX Design</h3>
+            <p>Focused on building a clean, product-feeling interface with strong hierarchy and usability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-view detail-page" id="whyPage">
+      <div class="detail-shell">
+        <div class="detail-header">
+          <button class="back-btn" type="button" onclick="goHome()">← Back to Home</button>
+          <p class="section-kicker">Why It Matters</p>
+          <h2>What this says about me as a developer</h2>
+        </div>
+
+        <div class="detail-card">
+          <p>
+            Morph shows that I can build a real interactive desktop application around a
+            specific user problem instead of only making static pages or tutorial exercises.
+          </p>
+          <p>
+            It reflects UI thinking, product iteration, Python development, and my ability
+            to take an idea from concept to something visual and functional.
+          </p>
+          <p>
+            It also shows that I like building projects with a strong identity, a clear purpose,
+            and room to keep improving over time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-view detail-page" id="contactPage">
+      <div class="detail-shell">
+        <div class="detail-header">
+          <button class="back-btn" type="button" onclick="goHome()">← Back to Home</button>
+          <p class="section-kicker">Contact</p>
+          <h2>Want to know more?</h2>
+        </div>
+
+        <div class="detail-card">
+          <p>
+            If you’d like to know more about this project or my work, you can reach me here:
+          </p>
+          <a class="contact-link" href="mailto:kolbrun.skr@gmail.com">kolbrun.skr@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuBtn = document.getElementById("menuBtn");
+      const closeMenuBtn = document.getElementById("closeMenuBtn");
+      const menuDrawer = document.getElementById("menuDrawer");
+      const overlay = document.getElementById("overlay");
+      const navLinks = document.querySelectorAll(".nav-link");
+      const pages = document.querySelectorAll(".page-view");
+
+      function openMenu() {
+        menuDrawer.classList.add("open");
+        overlay.classList.add("show");
+        menuDrawer.setAttribute("aria-hidden", "false");
+        menuBtn.setAttribute("aria-expanded", "true");
+      }
+
+      function closeMenu() {
+        menuDrawer.classList.remove("open");
+        overlay.classList.remove("show");
+        menuDrawer.setAttribute("aria-hidden", "true");
+        menuBtn.setAttribute("aria-expanded", "false");
+      }
+
+      function hideAllPages() {
+        pages.forEach((page) => page.classList.remove("active"));
+      }
+
+      window.showPage = function (pageName) {
+        hideAllPages();
+        const target = document.getElementById(pageName + "Page");
+        if (target) {
+          target.classList.add("active");
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+        closeMenu();
+      };
+
+      window.goHome = function () {
+        hideAllPages();
+        document.getElementById("homePage").classList.add("active");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        closeMenu();
+      };
+
+      if (menuBtn) {
+        menuBtn.addEventListener("click", openMenu);
+      }
+
+      if (closeMenuBtn) {
+        closeMenuBtn.addEventListener("click", closeMenu);
+      }
+
+      if (overlay) {
+        overlay.addEventListener("click", closeMenu);
+      }
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          const page = link.getAttribute("data-page");
+          showPage(page);
+        });
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeMenu();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

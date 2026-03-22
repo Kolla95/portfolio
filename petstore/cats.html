@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop Cats | Paw & Clover</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="store-topbar">
+    Cat essentials • Cozy beds • Healthy food • Toys, litter, and more
+  </div>
+
+  <header class="store-header">
+    <div class="container store-nav">
+      <a href="index.html" class="store-logo">Paw & Clover</a>
+
+      <nav>
+        <ul class="store-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cats.html" class="active-link">Cats</a></li>
+          <li><a href="dogs.html">Dogs</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="department-hero">
+    <div class="container department-hero-grid">
+      <div class="department-copy">
+        <p class="department-label">Cat Department</p>
+        <h1>Shop everything your cat needs</h1>
+        <p>
+          Browse food, toys, litter, and cozy home essentials in one easy place.
+          This page is designed to feel more like a real online store department
+          instead of a simple landing page.
+        </p>
+      </div>
+
+      <div class="department-search-card">
+        <h2>Search cat products</h2>
+
+        <form class="search-bar" id="cat-search-form">
+          <input
+            id="cat-search-input"
+            type="text"
+            placeholder="Search cat toys, food, litter..."
+          />
+          <button type="submit">Search</button>
+        </form>
+
+        <p class="search-note">Example searches: cat toys, dry food, litter, bed</p>
+
+        <div id="cat-search-results"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="department-layout">
+    <div class="container department-grid">
+      <aside class="sidebar-filter">
+        <h3>Shop Cat Categories</h3>
+        <ul>
+          <li><a href="cat-food.html">Cat Food</a></li>
+          <li><a href="cat-toys.html">Cat Toys</a></li>
+          <li><a href="cat-litter.html">Cat Litter</a></li>
+          <li><a href="cat-bed.html">Cat Beds</a></li>
+        </ul>
+
+        <div class="filter-box">
+          <h4>Popular Tags</h4>
+          <div class="tag-list">
+            <span>Indoor cats</span>
+            <span>Kittens</span>
+            <span>Natural food</span>
+            <span>Soft beds</span>
+            <span>Clumping litter</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="department-main">
+        <section class="shop-banner">
+          <div>
+            <p class="small-label">Featured Collection</p>
+            <h2>Soft, cozy, and everyday practical</h2>
+            <p>
+              Explore handpicked cat essentials made to feel warm, useful, and easy to shop.
+            </p>
+          </div>
+          <a href="cat-food.html" class="shop-banner-btn">Shop Best Sellers</a>
+        </section>
+
+        <section class="department-categories">
+          <article class="dept-card">
+            <div class="dept-icon">🍽️</div>
+            <div class="dept-content">
+              <h3>Cat Food</h3>
+              <p>
+                Dry food, wet food, healthy toppers, and treats for kittens and adult cats.
+              </p>
+              <a href="cat-food.html">Browse Cat Food</a>
+            </div>
+          </article>
+
+          <article class="dept-card">
+            <div class="dept-icon">🧶</div>
+            <div class="dept-content">
+              <h3>Cat Toys</h3>
+              <p>
+                Wands, plush toys, teaser toys, and enrichment favorites for active play.
+              </p>
+              <a href="cat-toys.html">Browse Cat Toys</a>
+            </div>
+          </article>
+
+          <article class="dept-card">
+            <div class="dept-icon">🪨</div>
+            <div class="dept-content">
+              <h3>Cat Litter</h3>
+              <p>
+                Lightweight, clumping, multi-cat, and odor-control options for every setup.
+              </p>
+              <a href="cat-litter.html">Browse Cat Litter</a>
+            </div>
+          </article>
+
+          <article class="dept-card">
+            <div class="dept-icon">🛏️</div>
+            <div class="dept-content">
+              <h3>Cat Beds</h3>
+              <p>
+                Cozy caves, window loungers, soft nests, and calming spots for naps.
+              </p>
+              <a href="cat-bed.html">Browse Cat Beds</a>
+            </div>
+          </article>
+        </section>
+
+        <section class="featured-row">
+          <div class="section-row-head">
+            <h2>Customer favorites</h2>
+            <a href="cat-toys.html">View all</a>
+          </div>
+
+          <div class="product-grid-store">
+            <article class="product-store-card">
+              <div class="product-thumb thumb-sage"></div>
+              <h3>Feather Wand Teaser</h3>
+              <p>Interactive toy for playful indoor cats.</p>
+              <span>$8.99</span>
+            </article>
+
+            <article class="product-store-card">
+              <div class="product-thumb thumb-blush"></div>
+              <h3>Chicken Dinner Wet Food</h3>
+              <p>Soft and savory food with simple ingredients.</p>
+              <span>$3.49</span>
+            </article>
+
+            <article class="product-store-card">
+              <div class="product-thumb thumb-cream"></div>
+              <h3>Cloud Cat Bed</h3>
+              <p>Super soft bed with raised calming edges.</p>
+              <span>$29.99</span>
+            </article>
+
+            <article class="product-store-card">
+              <div class="product-thumb thumb-blue"></div>
+              <h3>Fresh Clump Litter</h3>
+              <p>Low dust, odor control, and easy scooping.</p>
+              <span>$14.99</span>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </section>
+
+  <footer class="store-footer">
+    <div class="container store-footer-grid">
+      <div>
+        <h3>Paw & Clover</h3>
+        <p>Cozy pet essentials for everyday life.</p>
+      </div>
+
+      <div>
+        <p><strong>Shop</strong></p>
+        <p><a href="cats.html">Cats</a></p>
+        <p><a href="dogs.html">Dogs</a></p>
+      </div>
+
+      <div>
+        <p><strong>Contact</strong></p>
+        <p>hello@pawandclover.com</p>
+        <p>(555) 987-2244</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
