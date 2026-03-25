@@ -103,31 +103,35 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateSlider() {
-    const firstCard = cards[0];
-    if (!firstCard) return;
+  const firstCard = cards[0];
+  if (!firstCard) return;
 
-    if (isMobileSlider()) {
-      track.style.transform = "none";
-      prevBtn.style.display = "none";
-      nextBtn.style.display = "none";
-      return;
+  if (isMobileSlider()) {
+    track.style.transform = "none";
+    prevBtn.style.display = "none";
+    nextBtn.style.display = "none";
+
+    if (dotsWrap) {
+      dotsWrap.innerHTML = "";
     }
 
-    prevBtn.style.display = "grid";
-    nextBtn.style.display = "grid";
-
-    const trackStyles = window.getComputedStyle(track);
-    const gap = parseFloat(trackStyles.gap) || 28;
-    const moveAmount = currentIndex * (firstCard.offsetWidth + gap);
-
-    track.style.transform = `translateX(-${moveAmount}px)`;
-
-    prevBtn.disabled = currentIndex === 0;
-    nextBtn.disabled = currentIndex >= getMaxIndex();
-
-    updateDots();
+    return;
   }
 
+  prevBtn.style.display = "grid";
+  nextBtn.style.display = "grid";
+
+  const trackStyles = window.getComputedStyle(track);
+  const gap = parseFloat(trackStyles.gap) || 28;
+  const moveAmount = currentIndex * (firstCard.offsetWidth + gap);
+
+  track.style.transform = `translateX(-${moveAmount}px)`;
+
+  prevBtn.disabled = currentIndex === 0;
+  nextBtn.disabled = currentIndex >= getMaxIndex();
+
+  updateDots();
+}
   prevBtn.addEventListener("click", () => {
     const cardsPerView = getCardsPerView();
     currentIndex = Math.max(0, currentIndex - cardsPerView);
