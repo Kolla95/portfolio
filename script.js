@@ -35,14 +35,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
   const dotsWrap = document.querySelector(".slider-dots");
+  const viewport = document.querySelector(".projects-viewport");
 
-  if (!track || !prevBtn || !nextBtn) return;
+  const faders = document.querySelectorAll(".fade-in");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  faders.forEach((el) => observer.observe(el));
+
+  if (!track || !prevBtn || !nextBtn || !viewport) return;
 
   const cards = Array.from(track.querySelectorAll(".project-card"));
   let currentIndex = 0;
 
+  function isMobileSlider() {
+    return window.innerWidth <= 900;
+  }
+
   function getCardsPerView() {
-    return window.innerWidth <= 900 ? 1 : 2;
+    return isMobileSlider() ? 1 : 2;
   }
 
   function getMaxIndex() {
@@ -63,6 +79,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const maxIndex = getMaxIndex();
     dotsWrap.innerHTML = "";
+
+    if (isMobileSlider()) {
+      return;
+    }
 
     for (let i = 0; i <= maxIndex; i += getCardsPerView()) {
       const dot = document.createElement("button");
@@ -86,10 +106,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const firstCard = cards[0];
     if (!firstCard) return;
 
+    if (isMobileSlider()) {
+      track.style.transform = "none";
+      prevBtn.style.display = "none";
+      nextBtn.style.display = "none";
+      return;
+    }
+
+    prevBtn.style.display = "grid";
+    nextBtn.style.display = "grid";
+
     const trackStyles = window.getComputedStyle(track);
     const gap = parseFloat(trackStyles.gap) || 28;
-
     const moveAmount = currentIndex * (firstCard.offsetWidth + gap);
+
     track.style.transform = `translateX(-${moveAmount}px)`;
 
     prevBtn.disabled = currentIndex === 0;
@@ -97,18 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateDots();
   }
-
-  const faders = document.querySelectorAll(".fade-in");
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-}, { threshold: 0.2 });
-
-faders.forEach(el => observer.observe(el));
 
   prevBtn.addEventListener("click", () => {
     const cardsPerView = getCardsPerView();
