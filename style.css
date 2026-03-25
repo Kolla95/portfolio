@@ -982,6 +982,7 @@ select:-webkit-autofill {
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
+    padding-bottom: 0.5rem;
   }
 
   .projects-viewport::-webkit-scrollbar {
@@ -989,19 +990,20 @@ select:-webkit-autofill {
   }
 
   .projects-track {
-    gap: 22px;
+    gap: 16px;
     transform: none !important;
     width: max-content;
+    padding-right: 1rem;
   }
 
   .project-card {
-    flex: 0 0 100%;
-    min-width: 100%;
-    scroll-snap-align: start;
+    flex: 0 0 80%;
+    min-width: 80%;
+    scroll-snap-align: center;
   }
 
   .project-image {
-    height: 250px;
+    height: 220px;
   }
 
   .slider-controls,
