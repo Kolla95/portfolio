@@ -145,13 +145,13 @@ a {
 .content {
   display: flex;
   flex-direction: column;
-  gap: 74px;
+  gap: 56px;
 }
 
 .main-content {
   width: min(1200px, 92%);
   margin: 0 auto;
-  padding: 36px 0 80px;
+  padding: 88px 0 80px;
 }
 
 .content-section {
@@ -208,7 +208,7 @@ a {
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
-  padding: 72px 0 36px;
+  padding: 72px 0 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -265,7 +265,7 @@ a {
   max-width: 700px;
   font-size: 1.08rem;
   line-height: 1.9;
-  margin: 0 auto 34px;
+  margin: 0 auto 68px;
 }
 
 .hero-actions,
@@ -277,7 +277,9 @@ a {
 
 .hero-actions {
   justify-content: center;
+  margin-top: 36px;
 }
+
 /* ---------- Buttons ---------- */
 
 .btn {
@@ -326,11 +328,12 @@ a {
 
 .offer-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(280px, 340px));
+  justify-content: center;
   gap: 20px;
   width: 100%;
   max-width: 760px;
-  margin-top: 20px;
+  margin: 20px auto 0;
 }
 
 .offer-card {
@@ -440,12 +443,6 @@ a {
   background: rgba(255, 255, 255, 0.88);
 }
 
-.slider-controls {
-  display: flex;
-  gap: 12px;
-  flex-shrink: 0;
-}
-
 .slider-arrow {
   position: relative;
   width: 52px;
@@ -457,7 +454,7 @@ a {
   display: grid;
   place-items: center;
   cursor: pointer;
-  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, opacity 0.25s ease;
 }
 
 .slider-arrow::after {
@@ -470,18 +467,32 @@ a {
   pointer-events: none;
 }
 
-.slider-arrow:hover {
+.slider-arrow:hover:not(:disabled) {
   transform: translateY(-2px);
   background: rgba(18, 28, 34, 0.96);
   color: var(--accent);
 }
 
-.slider-arrow:hover::after {
+.slider-arrow:hover:not(:disabled)::after {
   border-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 0 1px rgba(134, 239, 172, 0.05);
 }
 
+.slider-arrow:disabled {
+  opacity: 0.28;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .projects-slider {
+  width: 100%;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 26px;
   width: 100%;
 }
 
@@ -601,27 +612,6 @@ a {
   background: rgba(255, 255, 255, 0.03);
 }
 
-.slider-dots {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 26px;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  border: none;
-  background: rgba(255, 255, 255, 0.14);
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.dot.active {
-  width: 34px;
-  background: var(--blue-dot);
-}
 
 /* ---------- Contact ---------- */
 
@@ -974,10 +964,9 @@ select:-webkit-autofill {
     padding-right: 1rem;
   }
 
-  .slider-controls,
-  .slider-dots {
-    display: none;
-  }
+  .slider-controls {
+  display: none;
+}
 }
 
 @media (max-width: 768px) {
@@ -1008,10 +997,11 @@ select:-webkit-autofill {
     gap: 40px;
   }
 
-  .main-content {
-    width: min(1200px, 94%);
-    padding: 28px 0 64px;
-  }
+ .main-content {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding: 76px 0 80px;
+}
 
   .hero-card {
     padding: 44px 0 20px;
@@ -1042,17 +1032,17 @@ select:-webkit-autofill {
   }
 
   .hero-text {
-    max-width: 100%;
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 24px;
-  }
+  color: var(--text-soft);
+  max-width: 700px;
+  font-size: 1.08rem;
+  line-height: 1.9;
+  margin: 0 auto 20px;
+}
 
-  .hero-actions {
-    width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-  }
+.hero-actions {
+  justify-content: center;
+  margin-top: 28px;
+}
 
   .hero-actions .btn,
   .contact-actions .btn {
@@ -1229,51 +1219,3 @@ select:-webkit-autofill {
   }
 }
 
-.why-list-card {
-  max-width: 760px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 24px;
-  padding: 28px 28px 24px;
-}
-
-.why-list {
-  list-style: none;
-  display: grid;
-  gap: 18px;
-  margin: 0;
-  padding: 0;
-}
-
-.why-list li {
-  position: relative;
-  padding-left: 22px;
-  color: var(--text-soft);
-  line-height: 1.8;
-}
-
-.why-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 12px;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--accent-strong);
-  box-shadow: 0 0 12px rgba(95, 168, 211, 0.25);
-}
-
-.why-list li {
-  font-size: 1.05rem;
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 2px;
-  margin-top: 10px;
-  background: var(--accent-strong);
-  opacity: 0.6;
-}
