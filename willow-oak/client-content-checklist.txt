@@ -1,0 +1,15 @@
+Business name
+Tagline
+Logo
+Brand colors
+Hero heading
+Hero paragraph
+Hero image
+Story heading
+Story paragraphs
+3 value-strip highlights
+FAQ questions and answers
+Contact email
+Square access token
+Square location ID
+Domain name

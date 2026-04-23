@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Willow & Oak | Handmade Leather Goods</title>
+  <meta
+    name="description"
+    content="A premium storefront for a handmade brand, designed to showcase products beautifully while supporting inventory-aware shopping and secure checkout."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="brand">
+        <span class="brand-mark">W&O</span>
+        <span class="brand-text">
+          <strong>Willow & Oak</strong>
+          <small>Handmade Leather Goods</small>
+        </span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#story">Story</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <button class="cart-button" id="cartBtn" type="button">
+        Bag <span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Modern online storefront</p>
+          <h1>Thoughtfully made pieces for everyday life.</h1>
+          <p class="hero-text">
+            Willow & Oak brings together timeless design, practical function,
+            and a warm shopping experience that feels elevated from the first visit.
+            This storefront is designed to help a small business present its products
+            beautifully while making browsing simple and intuitive.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#collection" class="btn btn-primary">Shop Collection</a>
+            <a href="#story" class="btn btn-secondary">Our Story</a>
+          </div>
+
+          <div class="hero-note">
+            <span>Inventory-aware product display</span>
+            <span>Designed for small business growth</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card">
+            <img
+              src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1200&q=80"
+              alt="Leather bag product"
+            />
+          </div>
+          <div class="floating-card floating-card-top">
+            <p>Refined shopping experience</p>
+            <strong>Clean, premium storefront design</strong>
+          </div>
+          <div class="floating-card floating-card-bottom">
+            <p>Built for real businesses</p>
+            <strong>Flexible product and inventory support</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="value-strip">
+      <div class="container value-grid">
+        <div>
+          <strong>Small-batch craftsmanship</strong>
+          <p>Elegant presentation for a thoughtful handmade brand.</p>
+        </div>
+        <div>
+          <strong>Inventory-aware products</strong>
+          <p>Products can reflect stock availability and sold-out states.</p>
+        </div>
+        <div>
+          <strong>Designed to convert</strong>
+          <p>A clean shopping experience with clear calls to action.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="collection-section" id="collection">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Collection</p>
+            <h2>Shop the latest pieces</h2>
+          </div>
+          <p class="section-copy">
+            A well-designed storefront should feel easy to explore, visually polished,
+            and simple for customers to shop. This layout is built to support product browsing,
+            filtering, and inventory-aware shopping in a way that feels natural for a growing brand.
+          </p>
+        </div>
+
+        <div class="filters-panel">
+          <div class="filter-group filter-search">
+            <label for="searchInput">Search</label>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search products..."
+            />
+          </div>
+
+          <div class="filter-group">
+            <label for="categoryFilter">Category</label>
+            <select id="categoryFilter">
+              <option value="all">All Categories</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="priceFilter">Price</label>
+            <select id="priceFilter">
+              <option value="all">All Prices</option>
+              <option value="under-30">Under $30</option>
+              <option value="30-70">$30–$70</option>
+              <option value="over-70">Over $70</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="stockFilter">Availability</label>
+            <select id="stockFilter">
+              <option value="all">All Products</option>
+              <option value="in-stock">In Stock</option>
+              <option value="sold-out">Sold Out</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="sortFilter">Sort</label>
+            <select id="sortFilter">
+              <option value="featured">Featured</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="name-az">Name: A to Z</option>
+            </select>
+          </div>
+
+          <div class="filter-group filter-button-wrap">
+            <button class="btn btn-secondary filter-clear" id="clearFiltersBtn" type="button">
+              Clear Filters
+            </button>
+          </div>
+        </div>
+
+        <div class="results-row">
+          <p id="resultsCount">0 products</p>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+
+        <div class="no-results hidden" id="noResultsMessage">
+          No products match your filters right now.
+        </div>
+      </div>
+    </section>
+
+    <section class="story-section" id="story">
+      <div class="container story-grid">
+        <div class="story-image">
+          <img
+            src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1200&q=80"
+            alt="Craft materials"
+          />
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow">Brand Story</p>
+          <h2>A calmer, more elevated way to shop a handmade collection</h2>
+          <p>
+            Willow & Oak is built around the idea that everyday pieces should feel
+            considered, durable, and beautifully made. The storefront experience reflects
+            that same thinking with a layout that feels warm, polished, and easy to navigate.
+          </p>
+          <p>
+            Behind the scenes, this kind of storefront can also support practical business needs
+            like inventory-aware products, secure checkout handoff, and easier product management
+            as the business grows.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-heading faq-heading">
+          <div>
+            <p class="eyebrow">FAQ</p>
+            <h2>Designed for real small business needs</h2>
+          </div>
+        </div>
+
+        <div class="faq-grid">
+          <article class="faq-card">
+            <h3>Can products show whether they are in stock?</h3>
+            <p>
+              Yes. This storefront is designed to support inventory-aware product display,
+              including in-stock and sold-out states.
+            </p>
+          </article>
+
+          <article class="faq-card">
+            <h3>Can the business owner update products without editing the website?</h3>
+            <p>
+              Yes. A setup like this can be connected to an external product system so
+              product information and availability are easier to manage.
+            </p>
+          </article>
+
+          <article class="faq-card">
+            <h3>Can checkout still be handled securely?</h3>
+            <p>
+              Yes. The storefront experience can stay fully branded while checkout is
+              handled through a secure payment provider.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <div>
+        <p class="cart-label">Secure Purchase</p>
+        <h3>Your selections</h3>
+      </div>
+      <button class="cart-close" id="closeCartBtn" type="button" aria-label="Close cart">
+        ×
+      </button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart">No items selected yet.</p>
+    </div>
+
+    <div class="cart-footer">
+      <p class="cart-total-line">
+        Total
+        <strong id="cartTotal">$0.00</strong>
+      </p>
+      <button class="btn btn-primary checkout-button" type="button">
+        Continue to Secure Checkout
+      </button>
+      <p class="checkout-note">You’ll continue to a secure checkout provided by the business’s payment platform.</p>
+    </div>
+  </aside>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
