@@ -62,65 +62,133 @@
   </div>
 </header>
 
-<main class="content main-content">
 
-  <section class="hero-card fade-in">
+
+  <main class="content main-content">
+
+  <section id="free-mockup" class="mockup-hero fade-in">
     <img src="images/KT-Web-Studio.png" class="hero-watermark" alt="" aria-hidden="true" />
 
-    <h1 class="hero-title">Websites that actually feel like your business</h1>
+    <div class="mockup-hero-copy">
+      
+
+      <h1>See what your business website could look like</h1>
+
       <p>
-        I help small businesses create clean, welcoming websites that are easy to use
-        and actually represent who they are.
+        I build clean, modern websites for small businesses. If you’re not sure
+        where to start, I can create a free mockup so you can see what your site
+        could look like before committing.
       </p>
 
-    <div class="hero-actions">
-      <a href="work-with-me.html" class="btn btn-primary">Start a Project</a>
-      <a href="#projects" class="btn btn-secondary">View Projects</a>
+      <p>
+        This is perfect if you currently only use Facebook, have an outdated site,
+        or want a more professional online presence.
+      </p>
+
+      <div class="mockup-points">
+        <span><i class="fa-solid fa-circle-check"></i> Custom website preview</span>
+        <span><i class="fa-solid fa-circle-check"></i> Mobile-friendly layout</span>
+        <span><i class="fa-solid fa-circle-check"></i> No pressure to commit</span>
+      </div>
     </div>
+
+    <form class="mockup-form" action="https://formspree.io/f/xwvrdkyl" method="POST">
+      <input type="hidden" name="_subject" value="Free Website Mockup Request" />
+          <p class="eyebrow">Free Website Mockup</p>
+
+      <div class="form-field">
+        <label for="mockup-name">Name</label>
+        <input type="text" id="mockup-name" name="name" required />
+      </div>
+
+      <div class="form-field">
+        <label for="mockup-email">Email</label>
+        <input type="email" id="mockup-email" name="email" required />
+      </div>
+
+      <div class="form-field">
+        <label for="mockup-business">Business Name</label>
+        <input type="text" id="mockup-business" name="business-name" />
+      </div>
+
+      <div class="form-field">
+        <label for="mockup-message">Tell me about your business</label>
+        <textarea
+          id="mockup-message"
+          name="message"
+          rows="4"
+          placeholder="Example: bakery, salon, cleaner, painter..."
+          required
+        ></textarea>
+      </div>
+
+      <button class="btn btn-primary" type="submit">
+        Request Free Mockup
+      </button>
+    </form>
   </section>
-      
-     <section id="services" class="content-section fade-in">
-  <div class="section-heading">
+
+
+
+<section id="services" class="content-section services-polished fade-in">
+  <div class="section-heading centered-heading">
     <div>
       <p class="eyebrow">Services</p>
-      <h2 class="section-title">What I Offer</h2>
+      <h2 class="section-title">What’s Included</h2>
     </div>
   </div>
 
-  <div class="offer-grid">
+  <div class="polished-services-grid">
+    <article class="polished-service">
+      <i class="fa-solid fa-circle-check"></i>
+      <div>
+        <h3>Business Websites</h3>
+        <p>Clean, professional websites that help small businesses look trustworthy online.</p>
+      </div>
+    </article>
 
-  <article class="offer-card">
-    <h3>Business Websites</h3>
-    <p>Clean, professional websites for small businesses.</p>
-  </article>
+    <article class="polished-service">
+      <i class="fa-solid fa-circle-check"></i>
+      <div>
+        <h3>Landing Pages</h3>
+        <p>Focused one-page websites built around one clear goal, like bookings or inquiries.</p>
+      </div>
+    </article>
 
-  <article class="offer-card">
-    <h3>Landing Pages</h3>
-    <p>Focused pages built around one clear goal.</p>
-  </article>
+    <article class="polished-service">
+      <i class="fa-solid fa-circle-check"></i>
+      <div>
+        <h3>Website Redesigns</h3>
+        <p>Modern updates for outdated websites that need better design, layout, and usability.</p>
+      </div>
+    </article>
 
-  <article class="offer-card">
-    <h3>Website Redesigns</h3>
-    <p>Modernizing outdated websites.</p>
-  </article>
+    <article class="polished-service">
+      <i class="fa-solid fa-circle-check"></i>
+      <div>
+        <h3>SEO Setup</h3>
+        <p>Basic SEO structure, page titles, descriptions, and content that helps Google understand your site.</p>
+      </div>
+    </article>
 
-  <article class="offer-card">
-    <h3>UI Improvements</h3>
-    <p>Improving usability and layout.</p>
-  </article>
+    <article class="polished-service">
+      <i class="fa-solid fa-circle-check"></i>
+      <div>
+        <h3>Website Support</h3>
+        <p>Help with hosting, domains, updates, small changes, and keeping your website running smoothly.</p>
+      </div>
+    </article>
 
-  <article class="offer-card">
-    <h3>Custom Features</h3>
-<p>Interactive features and simple web apps built specifically for your business.</p>
-  </article>
-  
-<article class="offer-card">
-  <h3>Website Setup & Support</h3>
-<p>I can help with domains, hosting, and getting everything set up the right way.</p>
-</article>
-
-</div>
+    <article class="polished-service">
+      <i class="fa-solid fa-circle-check"></i>
+      <div>
+        <h3>Custom Features</h3>
+        <p>Forms, galleries, menus, sections, and interactive features tailored to your business.</p>
+      </div>
+    </article>
+  </div>
 </section>
+
             
 <section id="projects" class="content-section projects-section fade-in">
   <div class="projects-topbar">
@@ -133,110 +201,78 @@
     <div class="projects-viewport">
       <div class="projects-track" id="projectsTrack">
 
-        <!-- MORPH -->
-        <article class="project-card">
-          <a href="Morph-showcase/index.html" target="_blank" rel="noopener" class="project-card-link">
-            <img src="images/morph.png" loading="lazy" class="project-image" alt="Morph AI project preview" />
-            <div class="project-content">
-              <h3>Morph AI Assistant</h3>
-              <p class="project-type">Desktop AI Concept</p>
-            </div>
-          </a>
+        <!-- ORIGINAL PROJECTS -->
 
-          <div class="project-links">
-            <a href="Morph-showcase/index.html" target="_blank" rel="noopener" aria-label="Open Morph website">
-              <i class="fa-solid fa-globe"></i>
-            </a>
-            <a href="https://github.com/Kolla95/morph-showcase" target="_blank" rel="noopener" aria-label="View Morph GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
+        <article class="project-card">
+          <img src="images/morph.png" class="project-image" />
+          <div class="project-content">
+            <h3>Morph AI Assistant</h3>
+            <p class="project-type">Desktop AI Concept</p>
           </div>
         </article>
 
-
-         <!-- willow & oak-->
-              <article class="project-card">
-            <a href="https://willow-oak-mockup.onrender.com/" target="_blank" rel="noopener" class="project-card-link">
-              <img src="images/willow-oak.png" loading="lazy" class="project-image" alt="Willow & Oak website preview" />
-              <div class="project-content">
-                <h3>Willow &amp; Oak</h3>
-                <p class="project-type">Small Business Website Concept</p>
-              </div>
-            </a>
-
-            <div class="project-links">
-              <a href="https://willow-oak-mockup.onrender.com/" target="_blank" rel="noopener" aria-label="Open Willow and Oak website">
-                <i class="fa-solid fa-globe"></i>
-              </a>
-              <a href="https://github.com/Kolla95/willow-oak-mockup" target="_blank" rel="noopener" aria-label="View Willow and Oak GitHub">
-                <i class="fa-brands fa-github"></i>
-              </a>
-            </div>
-              </article>
-
-        <!-- SUNNY SCOOPS -->
         <article class="project-card">
-          <a href="icecream/index.html" target="_blank" rel="noopener" class="project-card-link">
-            <img src="images/icecream.png" class="project-image" alt="Sunny Scoops preview" />
-            <div class="project-content">
-              <h3>Sunny Scoops</h3>
-              <p class="project-type">Ice Cream Brand Site</p>
-            </div>
-          </a>
-
-          <div class="project-links">
-            <a href="icecream/index.html" target="_blank" rel="noopener" aria-label="Open Sunny Scoops website">
-              <i class="fa-solid fa-globe"></i>
-            </a>
-            <a href="https://github.com/Kolla95/sunny-scoops" target="_blank" rel="noopener" aria-label="View Sunny Scoops GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
+          <img src="images/willow-oak.png" class="project-image" />
+          <div class="project-content">
+            <h3>Willow & Oak</h3>
+            <p class="project-type">Small Business Website</p>
           </div>
         </article>
 
-        <!-- PETSTORE -->
         <article class="project-card">
-          <a href="petstore/index.html" target="_blank" rel="noopener" class="project-card-link">
-            <img src="images/petstore.png" class="project-image" alt="Paw and Clover preview" />
-            <div class="project-content">
-              <h3>Paw &amp; Clover</h3>
-              <p class="project-type">Pet Store Website</p>
-            </div>
-          </a>
-
-          <div class="project-links">
-            <a href="petstore/index.html" target="_blank" rel="noopener" aria-label="Open Paw and Clover website">
-              <i class="fa-solid fa-globe"></i>
-            </a>
-            <a href="https://github.com/Kolla95/Petstore" target="_blank" rel="noopener" aria-label="View Paw and Clover GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
+          <img src="images/icecream.png" class="project-image" />
+          <div class="project-content">
+            <h3>Sunny Scoops</h3>
+            <p class="project-type">Ice Cream Brand</p>
           </div>
         </article>
 
-        <!-- KT -->
         <article class="project-card">
-          <a href="KT-Catch-Collect/index.html" target="_blank" rel="noopener" class="project-card-link">
-            <img src="images/kt.png" class="project-image" alt="KT Catch and Collect preview" />
-            <div class="project-content">
-              <h3>KT Catch &amp; Collect</h3>
-              <p class="project-type">Pokémon Storefront</p>
-            </div>
-          </a>
+          <img src="images/petstore.png" class="project-image" />
+          <div class="project-content">
+            <h3>Paw & Clover</h3>
+            <p class="project-type">Pet Store Website</p>
+          </div>
+        </article>
 
-          <div class="project-links">
-            <a href="KT-Catch-Collect/index.html" target="_blank" rel="noopener" aria-label="Open KT Catch and Collect website">
-              <i class="fa-solid fa-globe"></i>
-            </a>
-            <a href="https://github.com/Kolla95/kt-catch-collect" target="_blank" rel="noopener" aria-label="View KT Catch and Collect GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
+        <!-- 🔁 DUPLICATED PROJECTS (FOR LOOP) -->
+
+        <article class="project-card">
+          <img src="images/morph.png" class="project-image" />
+          <div class="project-content">
+            <h3>Morph AI Assistant</h3>
+            <p class="project-type">Desktop AI Concept</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="images/willow-oak.png" class="project-image" />
+          <div class="project-content">
+            <h3>Willow & Oak</h3>
+            <p class="project-type">Small Business Website</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="images/icecream.png" class="project-image" />
+          <div class="project-content">
+            <h3>Sunny Scoops</h3>
+            <p class="project-type">Ice Cream Brand</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="images/petstore.png" class="project-image" />
+          <div class="project-content">
+            <h3>Paw & Clover</h3>
+            <p class="project-type">Pet Store Website</p>
           </div>
         </article>
 
       </div>
     </div>
   </div>
+</section>
 
   <div class="slider-controls">
     <button class="slider-arrow" id="prevBtn" aria-label="Previous projects">
