@@ -1470,3 +1470,206 @@ select:-webkit-autofill {
 .mockup-hero {
   padding-top: 80px;
 }
+
+.why-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 42px 80px;
+  max-width: 1100px;
+  margin: 60px auto 0;
+}
+
+.why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.why-item i {
+  color: #9be59f;
+  font-size: 1.15rem;
+  margin-top: 7px;
+  width: 22px;
+  min-width: 22px;
+  text-align: center;
+}
+
+.why-item h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.why-item p {
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.8;
+  font-size: 1rem;
+  max-width: 440px;
+}
+
+@media (max-width: 700px) {
+  .why-list {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+}
+.project-description {
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.7;
+  font-size: 0.96rem;
+}
+
+.project-card {
+  position: relative;
+  flex: 0 0 calc(50% - 14px);
+  min-width: calc(50% - 14px);
+  border-radius: 30px;
+  overflow: hidden;
+  background: rgba(11, 24, 27, 0.9);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.project-image {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  background: #0d1a16;
+  transition: transform 0.35s ease;
+}
+
+.project-content {
+  padding: 28px 24px 28px;
+  background: rgba(5, 7, 10, 0.96);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 210px;
+}
+
+.project-description {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.7;
+  font-size: 0.96rem;
+  max-width: 95%;
+}
+/* FAQ SECTION */
+
+.faq-section {
+  padding: 110px 0;
+}
+
+.faq-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.faq-intro h2 {
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  margin: 8px 0 26px;
+  max-width: 420px;
+}
+
+.faq-intro .eyebrow {
+  margin-bottom: 10px;
+}
+
+.faq-intro p:not(.eyebrow) {
+  color: rgba(255,255,255,0.74);
+  line-height: 1.8;
+  max-width: 420px;
+  font-size: 1.05rem;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.faq-item {
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 22px;
+  overflow: hidden;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(155, 229, 159, 0.25);
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 24px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary i {
+  color: #9be59f;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.faq-item[open] summary i {
+  transform: rotate(45deg);
+}
+
+.faq-item p {
+  padding: 0 28px 26px;
+  color: rgba(255,255,255,0.76);
+  line-height: 1.8;
+  max-width: 680px;
+}
+
+@media (max-width: 900px) {
+  .faq-layout {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .faq-intro h2 {
+    max-width: 100%;
+  }
+}
+
+.projects-track > .project-card,
+.projects-track > .project-card-link {
+  flex: 0 0 calc(50% - 14px);
+  min-width: calc(50% - 14px);
+}
+
+.project-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 30px;
+}
+
+.project-card-link .project-card {
+  width: 100%;
+  min-width: 0;
+  flex: none;
+  height: 100%;
+}
