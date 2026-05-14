@@ -1756,3 +1756,75 @@ select:-webkit-autofill {
     width: 100%;
   }
 }
+
+/* FINAL MOBILE PROJECT SLIDER OVERRIDE */
+
+@media (max-width: 768px) {
+  .main-content {
+    width: 100%;
+    padding: 40px 20px 70px;
+  }
+
+  .projects-section {
+    overflow: hidden;
+  }
+
+  .projects-viewport {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .projects-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    transform: none !important;
+    transition: none !important;
+    padding-right: 20px;
+  }
+
+  .projects-track > .project-card-link,
+  .projects-track > .project-card {
+    flex: 0 0 calc(100vw - 40px) !important;
+    min-width: calc(100vw - 40px) !important;
+    max-width: calc(100vw - 40px) !important;
+    scroll-snap-align: start;
+  }
+
+  .project-card-link .project-card,
+  .project-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    border-radius: 26px;
+  }
+
+ .project-image {
+  width: 100%;
+  height: 240px !important;
+  object-fit: contain;
+  object-position: top center;
+  background: #081014;
+}
+
+  .project-content {
+    padding: 24px !important;
+    min-height: auto !important;
+  }
+
+  .project-card h3 {
+    font-size: 1.65rem !important;
+  }
+
+  .project-type {
+    font-size: 1rem !important;
+  }
+
+  .project-description {
+    font-size: 0.95rem !important;
+    line-height: 1.7;
+  }
+}
